@@ -8,7 +8,15 @@
     <script type="text/javascript">
     function initialize() {
 		document.addEventListener("deviceready",function(){
-		var latlng = new google.maps.LatLng(19.044856163959604, -98.17990927676735);
+		  Localizacion(19.044856163959604, -98.17990927676735);
+		}, false);
+  }
+  
+  
+  
+  function localizacion(longitud,latitud){
+	  
+	  var latlng = new google.maps.LatLng(longitud,latitud);
 		var myOptions = {
 		  zoom: 16,
 		  center: latlng,
@@ -22,8 +30,10 @@
 		  map: map, 
 		  title:"Aquí estoy!"
 	 	 }); 
-		}, false);
-  }
+	  
+	  }
+  
+  
     </script>
   </head>
   <body onload="initialize()">
