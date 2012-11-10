@@ -7,9 +7,20 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript">
     function initialize() {
-		document.addEventListener("deviceready",function(){
-		  Localizacion(19.044856163959604, -98.17990927676735);
+	
+		
+		document.addEventListener("deviceready",function(){	  
+		alert("Prueba")
+		localizacion(-34.397,150.644)
+		/*		if (navigator.network.connection.type == "wifi"){
+				navigator.geolocation.getCurrentPosition(function(position){
+					localizacion(position.coords.latitud,position.coords.longitude);					
+				}, function(err){
+					alert(err.message);
+				});
+		} 		*/
 		}, false);
+		
   }
   
   
