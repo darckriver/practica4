@@ -10,11 +10,14 @@
 	
 		
 		document.addEventListener("deviceready",function(){	  
-		alert("Prueba")
+		if (window.localStorage.getItem("coordenadas")){
+			alert(window.localStorage.getItem("coordenadas"));
+			}
 		//localizacion(-34.397,150.644)
 		if (navigator.network.connection.type == "wifi"){
 				navigator.geolocation.getCurrentPosition(function(position){
-					localizacion(position.coords.latitud,position.coords.longitude);					
+					window.localStorage.setItem("coordenadas","Longitud: "+position.coords.latitude+" Latitud: "+position.coords.longitude)
+					localizacion(position.coords.latitude,position.coords.longitude);					
 				}, function(err){
 					alert(err.message);
 				});
